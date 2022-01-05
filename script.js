@@ -17,8 +17,6 @@ var symbol = "!@#$%^&*()_+";
 
 // Improve the dialog funtion by adding a input-range bar
 
-// 8-128 chars, otherwise we should infrom the user
-
 inputRange.addEventListener("input", function (event) {
 
   var passwordLength = inputRange.value;
@@ -32,15 +30,7 @@ inputRange.addEventListener("input", function (event) {
 
 buttonGenerate.addEventListener('click', function (event) {
 
-  // we will ask the user to enter a password length 
-
-  //ask to include symbols
-
-  //ask to include uppercase
-
-  //ask to include lowercase
-
-  //ask to include number
+  // we will check if at leat one character criteria was select
 
   var passwordLength = Number(inputRange.value);
 
@@ -49,7 +39,7 @@ buttonGenerate.addEventListener('click', function (event) {
   var isLowercase = inputLowercase.checked;
   var isNumber = inputNumber.checked;
 
-  // yell at user if the user didnt choose any of the option
+  // inform user if user didnt choose any of the option
 
   var notChooseAny =
     !isNumber && !isSymbol && !isUppercase && !isLowercase;
@@ -59,8 +49,7 @@ buttonGenerate.addEventListener('click', function (event) {
     return;
   }
 
-  //generate the password once if user selected at leat one option
-
+  //generate the password responsively if user selected at least one option
 
   var charSet = "";
 
@@ -86,7 +75,7 @@ buttonGenerate.addEventListener('click', function (event) {
 
   for (var i = 0; i < passwordLength; i++) {
 
-    // randonmly grab a char from the date bank
+    // randonmly grab a character from the data bank
 
     var randomChar = charSet[Math.floor(Math.random() * charSet.length)]
 
@@ -98,7 +87,6 @@ buttonGenerate.addEventListener('click', function (event) {
 
   passwordintheTextarea.textContent = password
   
-
 });
 
 
