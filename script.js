@@ -51,7 +51,7 @@ buttonGenerate.addEventListener('click', function (event) {
 
   // yell at user if the user didnt choose any of the option
 
-  const notChooseAny =
+  var notChooseAny =
     !isNumber && !isSymbol && !isUppercase && !isLowercase;
 
   if (notChooseAny) {
