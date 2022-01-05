@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <header>
+      <!--Heading to display my app name-->
+      <h1>Password Generator</h1>
+    </header>
+    <div class="card">
+      <div class="card-header">
+        <!--Area to display password-->
+        <h2>Generate a Password</h2>
+      </div>
+      <div class="card-body">
+        <textarea readonly id="password-textarea" placeholder="Scroll and Checkbox for Your Secure Password" aria-label="Generated Password"></textarea>
+      </div>
+      <div class="card-footer">
+        
+        <!--Improve the dialog funtion by adding a input-range bar -->
+        <div>
+          <!--set the range of 8-128 chars for the bar-->
+          <input type="range" min="8" max="128" id="input-range">
+          <span id="password-range">68</span>
+        </div>
+        
+        <!--Improve the pop up box by checkbox-->
+        <div>
+          <label for="input-number">Number</label>
+          <input id=input-number type="checkbox">
+        </div>
+
+        <div>
+          <label for="input-uppercase">Uppercase</label>
+          <input id=input-uppercase type="checkbox">
+        </div>
+
+        <div>
+          <label for="input-lowercase">lowercase</label>
+          <input id=input-lowercase type="checkbox">
+        </div>
+
+        <div>
+          <label for="input-symbol">Symbol</label>
+          <input id=input-symbol type="checkbox">
+        </div>
+
+        <!--Button to generate password-->
+        <button id="btn-generate" class="btn">Generate Password</button>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
